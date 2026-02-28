@@ -1,12 +1,12 @@
 // Copyright 2022 NNTU-CS
-#include <cstdint>
 #include "alg.h"
 #include <iostream>
+#include <cstdint>
 
 
 bool checkPrime(uint64_t value) {
   bool x = true;
-  for (uint64_t i = 2; i * i < value; i++){
+  for (uint64_t i = 2; i * i <= value; i++){
     if (value % i == 0){
       x = false;
       break;
@@ -45,7 +45,7 @@ uint64_t sumPrime(uint64_t hbound) {
       sum += i;
     }
   }
-return sum;
+  return sum;
 }
 
 uint64_t twinPrimes(uint64_t lbound, uint64_t hbound) {
@@ -55,5 +55,5 @@ uint64_t twinPrimes(uint64_t lbound, uint64_t hbound) {
       count++;
     }
   }
-return count;
+  return count;
 }
