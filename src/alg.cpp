@@ -6,6 +6,14 @@
 
 bool checkPrime(uint64_t value) {
   bool x = true;
+  if (value == 2 || value == 3) {
+    return true;
+    break;
+  }
+  if (value < 2) {
+    return false;
+    break;
+  }
   for (uint64_t i = 2; i * i <= value; i++){
     if (value % i == 0){
       x = false;
