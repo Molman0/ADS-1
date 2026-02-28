@@ -4,30 +4,25 @@
 
 
 bool checkPrime(uint64_t value) {
-  uint64_t x = 1;
-  for (uint64_t i = 2; i * i < value; i++) {
-  if (value % i == 0) {
-    x = 0;
+  bool x = true;
+  for (uint64_t u = 2; i * i < value; i++){
+    if (value % i == 0){
+      x = false;
+      break;
     }
   }
-  if (x == 1) {
-    return true;
-  } else {
-    return false;
-  }
+  return x;
 }
 
 uint64_t nPrime(uint64_t n) {
-  uint64_t arr[200];
-  uint64_t x = 0;
-  uint64_t num;
-  for (uint64_t i = 1; i < 1000; i++) {
-    if (checkPrime(i) == 1) {
-      arr[x] = i;
-      x++;
+  uint64_t num = 1;
+  uint64_t count = 0;
+  while (count != n) {
+    num++;
+    if (checkPrime(num)) {
+      counter++;
     }
   }
-  num = arr[n];
   return num;
 }
 
