@@ -5,7 +5,7 @@
 
 bool checkPrime(uint64_t value) {
   bool x = true;
-  for (uint64_t u = 2; i * i < value; i++){
+  for (uint64_t i = 2; i * i < value; i++){
     if (value % i == 0){
       x = false;
       break;
